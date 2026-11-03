@@ -1,6 +1,6 @@
-# Structured prompt used to generate the animal language
+# Structured prompt for the animal language
 
-Model: Claude (Anthropic). The output was copied into `script.js`.
+This file records the rules used to write the invented animal language. The 16 phrases, their English translations and the lexicon on the site (in `script.js`) were written by Claude (Anthropic) following the brief below. Each phrase was then matched by creature name and order to one of the 16 sound prompts in `sound-generation.ipynb`; the sound prompts were written separately and were not generated from this prompt's output.
 
 ```
 ROLE: You are a field linguist documenting the language of an imaginary, lo-fi jungle.
@@ -15,9 +15,10 @@ RULES
 4. Phrases are 3-8 words, about nature, weather, danger, food, sleep or home.
 5. Vary the mood: soothing, alarmed, playful, territorial, mournful.
 
-OUTPUT: JSON list of {"name": creature name, "phrase": phrase, "en": English translation,
-        "sound": a 1-sentence description of what the creature's voice sounds like}
+OUTPUT: JSON list of {"name": creature name, "phrase": phrase, "en": English translation}
         Then list the lexicon as "root = meaning".
 ```
 
-The `sound` field of the result became the text prompt for Stable Audio Open (see `sound-generation.ipynb`).
+## Lexicon used
+
+lu = rain · nor = song · ki = little one · mo = sleep · brum = heavy · oru = moon · zeph = sun · tsk = danger · vi = leaf · hesh = wind, whisper · wub = home · kree = fly · ploo = fruit · nak = eat · sha = hush · pol = river · dru = dance · ee = I · ang = you · hoo = who · no = not
