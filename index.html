@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Postcards from my Jungle</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=VT323&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+<main>
+  <header>
+    <h1>Postcards from my Jungle</h1>
+    <p class="sub">50 animals that never existed · 16 voices · 1 invented language</p>
+  </header>
+
+  <section class="card" aria-live="polite">
+    <div class="photo">
+      <img id="photo" alt="A generated, imagined animal">
+      <div id="missing" class="missing" hidden>signal lost<br><small>image not found</small></div>
+      <div class="stamp" id="stamp">№ 001</div>
+    </div>
+    <div class="note">
+      <p class="label">specimen</p>
+      <h2 id="name">—</h2>
+      <p class="label">says</p>
+      <p id="phrase" class="phrase"></p>
+      <button id="translate" class="link" aria-pressed="false">show translation</button>
+      <p id="translation" class="translation" hidden></p>
+      <div class="player">
+        <button id="play" aria-label="Play sound">▶ listen</button>
+        <div class="bar"><div id="progress"></div></div>
+        <span id="dur">0s</span>
+      </div>
+    </div>
+  </section>
+
+  <nav class="controls">
+    <button id="prev" aria-label="Previous">◀</button>
+    <span id="count">1 / 50</span>
+    <button id="next" aria-label="Next">▶</button>
+    <button id="auto" aria-pressed="false">autoplay: off</button>
+  </nav>
+  <div id="strip" class="strip" role="listbox" aria-label="All 50 animals"></div>
+  <p class="hint">← → keys to browse · space to listen</p>
+  <footer>Images: diffusion model trained from scratch · Sounds: Stable Audio Open · Language: Claude</footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
